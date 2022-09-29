@@ -20,9 +20,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       <span
         style={{ background: dotColor }}
         className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
-      >
-        {icon}
-      </span>
+      />
+      {icon}
     </button>
   </TooltipComponent>
 );
@@ -37,8 +36,8 @@ const Navbar = () => {
     screenSize,
     setScreenSize,
   } = useStateContext();
-  
-  // Need To Focus On This Point And You Must UnderStand It Well ( افهمها كويس عشان مهمة ) 
+
+  // Need To Focus On This Point And You Must UnderStand It Well ( افهمها كويس عشان مهمة )
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
@@ -46,14 +45,14 @@ const Navbar = () => {
 
     handleResize();
 
-    return () => window.removeEventListener('resize', handleResize)
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     if (screenSize <= 900) {
-      setActiveMenu(false)
+      setActiveMenu(false);
     } else {
-      setActiveMenu(true)
+      setActiveMenu(true);
     }
   }, [screenSize]);
 
