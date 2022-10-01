@@ -44,9 +44,7 @@ const Ecommerce = () => {
                 {item.icon}
               </button>
               <p className="mt-3">
-                <span className="text-lg font-bold">
-                  {item.amount}
-                </span>
+                <span className="text-lg font-bold">{item.amount}</span>
                 <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
                 </span>
@@ -56,8 +54,56 @@ const Ecommerce = () => {
           ))}
         </div>
       </div>
-      <div>
-
+      <div className="flex gap-10 flex-wrap justify-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
+          <div className="flex justify-between">
+            <p className="font-semibold text-xl">Revenue Updates</p>
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl duration-300">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Expense</span>
+              </p>
+              <p className="flex items-center gap-2 text-green-600 hover:drop-shadow-xl duration-300">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Budget</span>
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 flex gap-10 flex-wrap justify-center">
+            <div className="border-r-1 border-color m-4 pr-10">
+              <div>
+                <p>
+                  <span className="text-3xl font-semibold">$88,291</span>
+                  <span className="p-1.5 hover:drop-shadow-xl duration-300 cursor-pointer rounded-full text-white bg-green-400 text-xs">
+                    17%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+              <div className="mt-8">
+                <p>
+                  <span className="text-3xl font-semibold">$28,506</span>
+                </p>
+                <p className="text-gray-500 mt-1">Expense</p>
+              </div>
+              <div className="mt-5">
+                <SparkLine
+                  currentColor="blue"
+                  id="line-sparkline"
+                  type="Line"
+                  height = "80px"
+                  width = "250px"
+                  data= {SparklineAreaData}
+                  color = "blue"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
