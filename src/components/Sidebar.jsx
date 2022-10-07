@@ -7,7 +7,7 @@ import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext();
 
   const handleCloseSideBar = () => {
     if(activeMenu && screenSize <= 900) {
@@ -16,9 +16,9 @@ const Sidebar = () => {
   }
 
   const activeLink =
-    "flex items-center gap-5 pl-4 pb-2.5 rounded-lg text-white text-md m-2";
+    "flex items-center gap-5 pl-4 pb-2.5 pt-2.5 rounded-lg text-white text-md m-2 duration-100";
   const normalLink =
-    "flex items-center gap-5 pl-4 pb-2.5 rounded-lg text-white text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray duration-300 m-2";
+    "flex items-center gap-5 pl-4 pb-2.5 pt-2.5 rounded-lg text-white text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray duration-100 m-2";
 
   return (
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
@@ -28,7 +28,7 @@ const Sidebar = () => {
             <Link
               to="/"
               onClick={handleCloseSideBar}
-              className="items-center gap-3 ml-3 mt-4 flex text-xl 
+              className="items-center gap-3 ml-3 mt-4 flex text-xl
               font-extrabold tracking-tight dark:text-white text-slate-900"
             >
               <MdOutlineDashboardCustomize /> <span>DashBoard</span>
@@ -55,6 +55,9 @@ const Sidebar = () => {
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
+                    style={({isActive}) => ({
+                      backgroundColor: isActive ? currentColor : ''
+                    })}
                   >
                     {link.icon}
                     <span className="capitalize">{link.name}</span>
