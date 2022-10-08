@@ -4,30 +4,34 @@ import {
   ColumnsDirective,
   ColumnDirective,
   Page,
-  Search, 
+  Search,
   Inject,
-  Toolbar
+  Toolbar,
 } from "@syncfusion/ej2-react-grids";
-import {employeesData, employeesGrid } from "../data/dummy";
+import { employeesData, employeesGrid } from "../data/dummy";
 import { Header } from "../components";
 
 const Employees = () => {
+  const editing = { allowDeleting: true, allowEditing: true };
+
   return (
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 p-2 md:p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
       <Header category="Page" title="Employees" />
       <GridComponent
         dataSource={employeesData}
         allowPaging
         allowSorting
-        toolbar={['Search']}
+        toolbar={["Search"]}
+        pageSettings={{ pageCount: 5 }}
         width="auto"
+        editSettings={editing}
       >
         <ColumnsDirective>
           {employeesGrid.map((item, i) => (
             <ColumnDirective key={i} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject services={[Search,  Page, Toolbar]}/>
+        <Inject services={[Search, Page, Toolbar]} />
       </GridComponent>
     </div>
   );

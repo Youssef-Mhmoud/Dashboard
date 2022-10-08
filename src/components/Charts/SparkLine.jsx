@@ -5,7 +5,16 @@ import {
   SparklineTooltip,
 } from "@syncfusion/ej2-react-charts";
 
-const SparkLine = ({ color, id, height, width, data, type, currentColor }) => {
+const SparkLine = ({
+  color,
+  id,
+  height,
+  width,
+  data,
+  type,
+  currentColor,
+  background,
+}) => {
   return (
     <SparklineComponent
       id={id}
@@ -26,6 +35,7 @@ const SparkLine = ({ color, id, height, width, data, type, currentColor }) => {
           visible: true,
         },
       }}
+      containerArea={{background: "#222222"}}
     >
       <Inject services={[SparklineTooltip]} />
     </SparklineComponent>

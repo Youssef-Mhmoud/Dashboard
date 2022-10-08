@@ -10,7 +10,7 @@ import {
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
-  const {currentColor} = useStateContext()
+  const { currentColor, currentMode } = useStateContext();
 
   return (
     <div className="mt-12">
@@ -95,12 +95,13 @@ const Ecommerce = () => {
               <div className="mt-5">
                 <SparkLine
                   currentColor={currentColor}
-                  id="line-sparkline"
+                  id="sparkline"
                   type="Line"
                   height="80px"
                   width="250px"
                   data={SparklineAreaData}
                   color={currentColor}
+                  background={currentMode === "Dark" ? "#33373E" : "#fff"}
                 />
               </div>
               <div className="mt-10">
@@ -113,7 +114,7 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked width="320px" height="360px"/>
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
         </div>
