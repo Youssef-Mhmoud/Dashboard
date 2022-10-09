@@ -101,7 +101,6 @@ const Ecommerce = () => {
                   width="250px"
                   data={SparklineAreaData}
                   color={currentColor}
-                  background={currentMode === "Dark" ? "#33373E" : "#fff"}
                 />
               </div>
               <div className="mt-10">
