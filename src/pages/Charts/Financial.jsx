@@ -1,14 +1,13 @@
 import React from "react";
 import {
   ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-  HiloSeries, Category, Tooltip, ILoadedEventArgs, DateTime, Zoom, Logarithmic,
-  Crosshair, ChartTheme
+  HiloSeries, Category, Tooltip, DateTime, Zoom, Logarithmic,
+  Crosshair
 } from '@syncfusion/ej2-react-charts';
 import {
   FinancialPrimaryXAxis,
   FinancialPrimaryYAxis,
-  colorMappingData,
-  rangeColorMapping,
+
   financialChartData,
 } from "../../data/dummy";
 import { useStateContext } from "../../contexts/ContextProvider";
