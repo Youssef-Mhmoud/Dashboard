@@ -45,7 +45,7 @@ const App = () => {
             </TooltipComponent>
           </div>
           {activeMenu ? (
-            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white animate-[fadeInLeft_1s_forwards]">
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white animate-[slideInLeft_0.5s_forwards]">
               <Sidebar />
             </div>
           ) : (
