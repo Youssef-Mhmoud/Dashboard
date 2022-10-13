@@ -685,7 +685,7 @@ export const recentTransactions = [
   {
     icon: <TiTick />,
     amount: '+$350',
-    title: 'Bank Transfer',
+    title: 'Transfer',
     desc: 'Money Added',
 
     iconColor: 'rgb(228, 106, 118)',
