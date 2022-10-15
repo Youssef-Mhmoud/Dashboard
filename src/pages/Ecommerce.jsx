@@ -15,6 +15,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import PieChart from "../components/Charts/PieChart";
 import { IoIosMore } from "react-icons/io";
+import product6 from "../data/product6.jpg";
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -348,7 +349,38 @@ const Ecommerce = () => {
                 borderRadius="10px"
               />
             </div>
-            <p className=""></p>
+            <p className="text-gray-400 text-sm">36 Recent Transactions</p>
+          </div>
+        </div>
+        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+          <div className="flex justify-between">
+            <p className="text-xl font-semibold">Daily Activities</p>
+            <button
+              type="button"
+              className="text-xl font-semibold text-gray-500"
+            >
+              <IoIosMore />
+            </button>
+          </div>
+          <div className="mt-10">
+            <img className="md:w-96 h-1/2" src={product6} alt="" />
+            <div className="mt-8">
+              <p className="font-semibold text-lg">React 18 coming soon!</p>
+              <p className="text-gray-400">By John Doe</p>
+              <p className="mt-8 text-sm text-gray-400">
+                {" "}
+                This will be the small description for the news you have shown
+                here. There could be some great info.
+              </p>
+              <div className="mt-3">
+                <Button
+                  color="white"
+                  bgColor={currentColor}
+                  text="Read More"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
