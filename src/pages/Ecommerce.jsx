@@ -31,9 +31,6 @@ const DropDown = ({ currentMode }) => (
   </div>
 );
 
-const anim = (index) => {
-  return `fadeInDown .6s ${index + .5}s forwards`
-}
 
 const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();
@@ -41,7 +38,7 @@ const Ecommerce = () => {
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-no-repeat bg-cover bg-center opacity-0 animate-[fadeInDown_1s_forwards]">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-no-repeat bg-cover bg-center ">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -69,8 +66,7 @@ const Ecommerce = () => {
           {earningData.map((item, i) => (
             <div
               key={item.title}
-              className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl  opacity-0'
-              style={{animation: anim(i)}}
+              className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl '
             >
               <button
                 type="button"
@@ -91,7 +87,7 @@ const Ecommerce = () => {
         </div>
       </div>
       <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780 opacity-0 animate-[fadeInRight_1s_3.8s_forwards]">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
           <div className="flex justify-between ">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
@@ -153,7 +149,7 @@ const Ecommerce = () => {
         </div>
         <div>
           <div
-            className="rounded-2xl md:w-400 p-4 m-3 opacity-0 animate-[fadeInDown_1s_4.4s_forwards]"
+            className="rounded-2xl md:w-400 p-4 m-3"
             style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center ">
@@ -177,7 +173,7 @@ const Ecommerce = () => {
               />
             </div>
           </div>
-          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10 opacity-0 animate-[fadeInLeft_1s_4.8s_forwards]">
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
             <div>
               <p className="text-2xl font-semibold ">$43,246</p>
               <p className="text-gray-400">Yearly sales</p>
@@ -195,7 +191,7 @@ const Ecommerce = () => {
       </div>
 
       <div className="flex gap-10 m-4 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl opacity-0 animate-[fadeInUp_1s_5.4s_forwards]">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
             <p className="text-xl font-semibold">Recent Transactions</p>
             <DropDown currentMode={currentMode} />
@@ -235,7 +231,7 @@ const Ecommerce = () => {
             <p className="text-gray-400 text-sm">36 Recent Transactions</p>
           </div>
         </div>
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760 opacity-0 animate-[fadeInUp_1s_5.8s_forwards]">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760 ">
           <div className="flex justify-between items-center gap-2 mb-10">
             <p className="text-xl font-semibold">Sales Overview</p>
             <DropDown currentMode={currentMode} />
