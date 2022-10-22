@@ -364,7 +364,7 @@ const Ecommerce = () => {
             </button>
           </div>
           <div className="mt-10">
-            <img className="md:w-96 h-1/2" src={product6} alt="" />
+            <img className="md:w-96 h-52" src={product6} alt="" />
             <div className="mt-8">
               <p className="font-semibold text-lg">React 18 coming soon!</p>
               <p className="text-gray-400">By John Doe</p>
