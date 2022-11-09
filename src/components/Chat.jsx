@@ -30,7 +30,10 @@ const Chat = () => {
       <div className="mt-5">
         {chatData.map((item, i) => {
           return (
-            <div className="flex p-3 gap-5 items-center leading8 cursor-pointer border-b-1 border-color" key={i}>
+            <div
+              className="flex p-3 gap-5 items-center leading8 cursor-pointer border-b-1 border-color"
+              key={i}
+            >
               <div>
                 <img
                   src={item.image}
@@ -42,13 +45,19 @@ const Chat = () => {
                 <p className="font-semibold dark:text-gray-200 mb-1">
                   {item.message}
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{item.time}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {item.desc}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {item.time}
+                </p>
               </div>
             </div>
           );
         })}
-        <Button text={'See all messages'}/>
+        <div>
+          <Button text={"See all messages"} />
+        </div>
       </div>
     </div>
   );
