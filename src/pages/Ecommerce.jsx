@@ -123,7 +123,7 @@ const Ecommerce = () => {
                 <p className="text-gray-500 mt-1">Expense</p>
               </div>
               <div className="mt-5">
-                <SparkLine
+                {/* <SparkLine
                   currentColor={currentColor}
                   id="line-sparkLine"
                   type="Line"
@@ -131,7 +131,7 @@ const Ecommerce = () => {
                   width="250px"
                   data={SparklineAreaData}
                   color={currentColor}
-                />
+                /> */}
               </div>
               <div className="mt-10">
                 <Button
