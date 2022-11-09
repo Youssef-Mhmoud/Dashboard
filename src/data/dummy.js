@@ -594,7 +594,7 @@ export const chatData = [
     image:
       avatar3,
     message: 'New message received',
-    desc: 'Salma sent you new message',
+    desc: 'John sent you new message',
     time: '11:56 AM',
   },
   {
@@ -607,7 +607,7 @@ export const chatData = [
   {
     image:
       avatar,
-    message: 'Jolly completed tasks',
+    message: 'Jone completed tasks',
     desc: 'Assign her new tasks',
     time: '1:12 AM',
   },
