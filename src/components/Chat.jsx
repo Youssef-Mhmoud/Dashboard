@@ -34,12 +34,13 @@ const Chat = () => {
               className="flex p-3 gap-5 items-center leading8 cursor-pointer border-b-1 border-color"
               key={i}
             >
-              <div>
+              <div className="relative">
                 <img
                   src={item.image}
                   alt=""
                   className="rounded-full w-10 h-10"
                 />
+                <span className={`w-3 h-3 rounded-full bg-${item.active} absolute right-0 bottom-0`}></span>
               </div>
               <div>
                 <p className="font-semibold dark:text-gray-200 mb-1">

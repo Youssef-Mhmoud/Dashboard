@@ -589,6 +589,7 @@ export const chatData = [
     message: 'Roman Joined the Team!',
     desc: 'Congratulate him',
     time: '9:08 AM',
+    active: 'green-600',
   },
   {
     image:
@@ -603,6 +604,7 @@ export const chatData = [
     message: 'New Payment received',
     desc: 'Check your earnings',
     time: '4:39 AM',
+    active: 'green-600',
   },
   {
     image:
