@@ -8,7 +8,7 @@ const Chat = () => {
   const { currentColor } = useStateContext();
 
   return (
-    <div className="nav-item absolute right-5 md:right-52 top-16 rounded-lg p-8 bg-slate-50 dark:bg-[#42464D] w-96 shadow-2xl animate-[fadeIn_.5s_forwards]">
+    <div className="nav-item absolute right-5 md:right-52 top-16 rounded-lg p-8 bg-slate-50 dark:bg-[#42464D] w-96 shadow-2xl animate-[zoomIn_.5s_forwards]">
       <div className="flex justify-between items-center">
         <div className="flex gap-3">
           <p className="font-semibold text-lg dark:text-gray-200">Messages</p>
